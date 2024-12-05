@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // funcion para obtener el total de ventas
   const getTotalSales = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/admin/total', {
+      const response = await fetch('http://107.20.213.249/api/admin/total', {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${getCookie('token')}`, // token del admin
