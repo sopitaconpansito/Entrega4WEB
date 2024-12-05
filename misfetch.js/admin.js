@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const description = document.getElementById('product-description').value;
 
     try {
-      const response = await fetch('http://localhost:3001/api/admin/products', {
+      const response = await fetch('http://107.20.213.249/api/admin/products', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // funcion para eliminar un producto
   const deleteProduct = async (productId) => {
     try {
-      const response = await fetch(`http://localhost:3001/api/admin/products/${productId}`, {
+      const response = await fetch(`http://107.20.213.249/api/admin/products/${productId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${getCookie('token')}`, // token del admin
