@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = await response.json();
 
       if (response.ok) {
-        document.getElementById('total-sales').textContent = `$${data.total}`; // mostramos el total en la pagina
+        document.getElementById('total-sales').textContent = `$${data.total}`; 
       } else {
-        alert(`error: ${data.message}`); // si algo falla
+        alert(`error: ${data.message}`);
       }
     } catch (error) {
-      console.error('error al obtener el total:', error); // mostramos el error en consola
+      console.error('error al obtener el total:', error);
     }
   };
 
