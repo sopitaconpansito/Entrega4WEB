@@ -61,39 +61,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // funcionn para agregar un producto nuevo
+  // funcion para agregar un producto nuevo
   const addProduct = async (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    const name = document.getElementById('product-name').value;
-    const price = document.getElementById('product-price').value;
-    const stock = document.getElementById('product-stock').value;
-    const imagePath = document.getElementById('product-image').value;
-    const description = document.getElementById('product-description').value;
+  const name = document.getElementById('product-name').value;
+  const price = document.getElementById('product-price').value;
+  const stock = document.getElementById('product-stock').value;
+  const image = document.getElementById('product-image').value; 
+  const description = document.getElementById('product-description').value;
 
-    try {
-      const response = await fetch('http://localhost:3001/api/admin/products', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${getCookie('token')}`,
-        },
-        body: JSON.stringify({ name, price, stock, image_path: imagePath, description }),
-      });
+  try {
+    const response = await fetch('http://localhost:3001/api/admin/products', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${getCookie('token')}`,
+      },
+      body: JSON.stringify({ stock, name, price, image, description }), 
+    });
 
-      const data = await response.json();
+    const data = await response.json();
 
-      if (response.ok) {
-        alert('Producto agregado');
-        document.getElementById('product-form').reset(); 
-        getProducts(); 
-      } else {
-        alert(`error: ${data.message}`);
-      }
-    } catch (error) {
-      console.error('error al agregar el producto:', error);
+    if (response.ok) {
+      alert('Producto agregado');
+      document.getElementById('product-form').reset(); 
+      getProducts();
+    } else {
+      alert(`error: ${data.message}`);
     }
-  };
+  } catch (error) {
+    console.error('error al agregar el producto:', error);
+  }
+};
 
   // funcion para editar un producto
   window.editProduct = async (productId) => {
