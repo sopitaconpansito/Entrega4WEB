@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // carrito del usuario
     const loadCart = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/shoppingcart', {
+        const response = await fetch('http://107.20.213.249/api/shoppingcart', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // agregar producto al carrito
     const addToCart = async (productId, quantity) => {
       try {
-        const response = await fetch(`http://localhost:3001/api/shoppingcart/${productId}`, {
+        const response = await fetch(`http://107.20.213.249/api/shoppingcart/${productId}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // eliminar producto del carrito
     const removeFromCart = async (productId) => {
       try {
-        const response = await fetch(`http://localhost:3001/api/shoppingcart/${productId}`, {
+        const response = await fetch(`http://107.20.213.249/api/shoppingcart/${productId}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',
