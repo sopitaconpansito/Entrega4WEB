@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // obtener todos los productos
     const loadAllProducts = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/products', {
+        const response = await fetch('http://107.20.213.249/api/products', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // obtener un producto por id
     const loadProductById = async (productId) => {
       try {
-        const response = await fetch(`http://localhost:3001/api/product/${productId}`, {
+        const response = await fetch(`http://107.20.213.249/api/product/${productId}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
