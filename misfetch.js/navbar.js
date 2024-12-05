@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!token) return { isLoggedIn: false };
 
     try {
-      const response = await fetch('http://localhost:3001/api/profile', {
+      const response = await fetch('http://107.20.213.249/api/profile', {
         method: 'GET',
         headers: { Authorization: `Bearer ${token}` },
       });
