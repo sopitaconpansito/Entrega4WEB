@@ -3,29 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar Dinámica</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Tienda xd</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar {
+      background-color: #0048ba; 
+    }
+
+    .navbar-brand, .nav-link, .btn {
+      color: #fff !important; 
+    }
+
+    .nav-link:hover, .btn:hover {
+      color: #0048ba !important; 
+      background-color: #fff !important; 
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <div class="container">
-      <a class="navbar-brand text-white" href="/">MiApp</a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Tienda xd</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link text-white" href="/products.html">Productos</a>
+            <a class="nav-link" href="/auth.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="/user.html">Acerca de user</a>
+            <a class="nav-link" href="/product.html">Catalogo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cart.html">Carrito</a>
           </li>
         </ul>
+        <div id="navbar-user-actions" class="d-flex"></div>
       </div>
     </div>
   </nav>
 
   <script src="navbar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
