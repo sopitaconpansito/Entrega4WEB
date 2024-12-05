@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // funcion para cargar la info del usuario
     const loadUserInfo = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/profile', {
+        const response = await fetch('http://107.20.213.249/api/profile', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
       try {
         // hacemos el fetch para mandar la actualizacion
-        const response = await fetch('http://localhost:3001/api/profile', {
+        const response = await fetch('http://107.20.213.249/api/profile', {
           method: 'PUT', // metodo put para actualizar
           headers: {
             'Content-Type': 'application/json', // tipo de contenido
