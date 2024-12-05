@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // funcion para obtener el total de ventas
   const getTotalSales = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/admin/total', {
+      const response = await fetch('http://107.20.213.249/api/admin/total', {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${getCookie('token')}`, // token del admin
@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = await response.json();
 
       if (response.ok) {
-        document.getElementById('total-sales').textContent = `$${data.total}`; // mostramos el total en la pagina
+        document.getElementById('total-sales').textContent = `$${data.total}`; 
       } else {
-        alert(`error: ${data.message}`); // si algo falla
+        alert(`error: ${data.message}`);
       }
     } catch (error) {
-      console.error('error al obtener el total:', error); // mostramos el error en consola
+      console.error('error al obtener el total:', error);
     }
   };
 
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const description = document.getElementById('product-description').value;
 
     try {
-      const response = await fetch('http://localhost:3001/api/admin/products', {
+      const response = await fetch('http://107.20.213.249/api/admin/products', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // funcion para eliminar un producto
   const deleteProduct = async (productId) => {
     try {
-      const response = await fetch(`http://localhost:3001/api/admin/products/${productId}`, {
+      const response = await fetch(`http://107.20.213.249/api/admin/products/${productId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${getCookie('token')}`, // token del admin

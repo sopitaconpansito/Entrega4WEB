@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('password').value;
   
         try {
-          const response = await fetch('http://localhost:3001/api/signup', {
+          const response = await fetch('http://107.20.213.249/api/signup', {
             method: 'POST', // metodo post para enviar los datos
             headers: {
               'Content-Type': 'application/json', // tipo de contenido que vamos a enviar
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('password').value;
   
         try {
-          const response = await fetch('http://localhost:3001/api/login', {
+          const response = await fetch('http://107.20.213.249/api/login', {
             method: 'POST', // metodo post para el login
             headers: {
               'Content-Type': 'application/json', // enviamos datos como json
