@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <h5>${product.name}</h5>
               <p>${product.description}</p>
               <p>Precio: $${product.price}</p>
-              <a href="product-detail.html?id=${product.id}">Ver más</a>
+              <a href="product?id=${product.id}">Ver más</a>
             </div>
           `;
           productList.appendChild(productCard);
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
     
-        const productDetail = document.getElementById('product-detail');
+        const productDetail = document.getElementById('product');
         productDetail.innerHTML = ''; // Limpiamos los detalles anteriores
     
         // Mostramos los detalles del producto en una tarjeta
