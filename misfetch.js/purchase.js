@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // funcion para hacer la compra
     const makePurchase = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/purchase', {
+        const response = await fetch('http://107.20.213.249/api/purchase', {
           method: 'POST',
           headers: {
             Authorization: `Bearer ${getCookie('token')}`, // token del usuario
