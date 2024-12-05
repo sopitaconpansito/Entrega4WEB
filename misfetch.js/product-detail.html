@@ -5,17 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detalle del Producto</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .product-detail-card {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-detail-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    .product-detail-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-bottom: 2px solid #ddd;
+    }
+    .product-title {
+      font-size: 1.75rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .product-description {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .product-price {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #28a745;
+    }
+    .btn-back {
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .btn-back:hover {
+      background-color: #0056b3;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
   <div class="container my-5">
-    <h1 class="text-center">Detalle del Producto</h1>
+    <h1 class="text-center mb-4">Detalle del Producto</h1>
 
-    <div id="product-detail" class="card mx-auto" style="max-width: 30rem;">
-      <!-- el detalle de un producto -->
+    <div id="product-detail" class="product-detail-card card mx-auto" style="max-width: 30rem;">
+      <!-- detalle de un producto en especifico -->
     </div>
 
     <div class="mt-3 text-center">
-      <a href="products.html" class="btn btn-primary">Volver a la lista de productos</a>
+      <a href="products.html" class="btn btn-back">Volver a la lista de productos</a>
     </div>
   </div>
 
